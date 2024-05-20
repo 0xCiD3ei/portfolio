@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+.heroSection {
+	background-image: url("../assets/images/hero-bg-1.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	color: var(--white);
+	height: 100vh;
+	padding: 3rem 6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+}
+.heroOverlay {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	background-color: black;
+	filter: opacity(0.8);
+}
+
+.heroContent {
+	font-family: "Lato", sans-serif;
+	margin-bottom: 2rem;
+	width: fit-content;
+}
+
+.heroIntro {
+	font-size: 4rem;
+	margin-bottom: 0.5rem;
+	color: var(--nav-blue);
+	display: flex;
+	flex-direction: column;
+}
+
+.heroDesc,
+.heroDescSub {
+	font-size: 1.2rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 100;
+}
+
+.heroContact {
+	text-decoration: none;
+	color: var(--nav-blue);
+  font-size: 80%;
+	font-weight: 500;
+	letter-spacing: 3px;
+	padding: 1rem 2rem;
+	border: 1px solid var(--nav-blue);
+	background-color: transparent;
+	width: fit-content;
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+	transition: 0.4s transform ease-in-out;
+	will-change: transform;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+}
+
+.heroContact::after {
+	background-color: var(--nav-blue);
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(-100%, 0);
+	transform-origin: top right;
+	transition: 0.8s transform ease-out;
+	will-change: transform;
+	z-index: -1;
+}
+
+.heroContact:hover::after {
+	transform: translate(0, 0);
+}
+
+.heroContact:hover {
+	color: var(--white);
+	will-change: transform;
+}
+
+.heroContent .heroDesc {
+	color: #fff;
+	overflow: hidden;
+	line-height: 2;
+	letter-spacing: 0.15em;
+}
+
+.menuIcon,
+.toTopIcon {
+	padding: 0.7rem;
+	cursor: pointer;
+	font-size: 1.3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid var(--nav-blue);
+	border-radius: 50%;
+	transition: all 0.4s ease;
+	z-index: 99999999;
+	background-color: var(--nav-blue);
+}
+
+.menuIcon {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+}
+
+.menuIcon:hover {
+	background-color: var(--nav-blue-shade);
+}
+
+.cvIcon {
+	margin-left: 0.5rem;
+}
+
+.toTopIcon {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+}
+
+.toTopIcon:hover {
+	background-color: var(--nav-blue-shade);
+}
+
+.show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.hide {
+	visibility: hidden;
+	opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.menuIcon,
+	.toTopIcon {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.heroIntro {
+		font-size: 5rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.heroSection {
+		padding: 3rem 1rem;
+		white-space: normal;
+	}
+
+	.heroIntro {
+		font-size: 3rem;
+	}
+
+	.heroDesc,
+	.heroDescSub {
+		font-size: 1rem;
+	}
+
+	.heroContact {
+		font-size: 80%;
+	}
+
+	.menuIcon,
+	.toTopIcon {
+		font-size: 1rem;
+		padding: 0.6rem;
+		background-color: var(--nav-blue);
+	}
+}

@@ -1,0 +1,134 @@
+.navbar {
+  background-color: var(--section-bgd);
+  color: var(--white);
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  opacity: 0;
+  overflow-y: scroll;
+  transition: all .5s ease-in-out;
+  z-index: 99999;
+}
+
+.navbar.active {
+  left: 0;
+  opacity: 1;
+}
+
+.navbar::-webkit-scrollbar {
+  scroll-margin: 0;
+}
+
+.navbarContainer {
+  padding: 1rem 1.5rem;
+}
+
+.topDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.img__cover{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profilePicSmall {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 5px solid var(--nav-deep-blue);
+}
+
+.profileName {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: var(--white);
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navLinks li, .midDetails li {
+  list-style: none;
+}
+
+.navLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--white);
+  margin: 0 .3rem;
+  padding: .7rem;
+  background-color: var(--nav-deep-blue);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLink:hover {
+  background-color: var(--nav-blue);
+}
+
+.midDetails {
+  padding: 1rem;
+}
+
+.flex{
+  display: flex;
+}
+
+.midLinks {
+  display: flex;
+  align-items: center;
+  color: var(--nav-grey);
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem 0;
+  font-size: .9rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.midLinks.active {
+  color: var(--nav-blue);
+}
+
+.midLinks:hover {
+  color: var(--white);
+}
+
+.midLinks:hover .midIcon { color: var(--nav-blue); }
+
+.midIcon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+
+.copy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  color: var(--white);
+  font-size: 65%;
+  font-family: "Quicksand", sans-serif;
+}

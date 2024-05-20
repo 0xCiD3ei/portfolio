@@ -1,0 +1,157 @@
+
+.contactBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+
+.contactHeading {
+  margin-bottom: 2rem;
+}
+
+.contactHeading p {
+  line-height: 2;
+}
+
+.contactHello {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactHello p{
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.helloLinks {
+  color: var(--nav-blue-shade);
+  margin: .5rem 0;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.helloLinks:hover {
+  color: var(--nav-blue);
+}
+
+/* Form */
+.rightBox {
+  width: 90%;
+  margin: 0 auto;
+  color: var(--white);
+  font-size: 80%;
+}
+
+.formTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.name, .email{
+  width: 40%;
+}
+
+.name, .email, .message {
+  display: flex;
+  flex-direction: column;
+}
+
+.name label, .email label, .message label {
+  margin-bottom: 1rem;
+}
+
+.input, .textarea {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid var(--white);
+  padding-bottom: .5rem;
+  word-wrap: break-word;
+  color: var(--white); 
+}
+
+.formMid {
+  margin-bottom: 4rem;
+}
+
+.formBtn {
+  display: flex;
+  justify-content: center;    
+}
+
+.heroContact {
+	text-decoration: none;
+	color: var(--nav-blue);
+  font-size: 80%;
+	font-weight: 500;
+	letter-spacing: 3px;
+	padding: 1rem 2rem;
+	border: 1px solid var(--nav-blue);
+	background-color: transparent;
+	width: fit-content;
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+	transition: 0.4s transform ease-in-out;
+	will-change: transform;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+}
+
+.heroContact::after {
+	background-color: var(--nav-blue);
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(-100%, 0);
+	transform-origin: top right;
+	transition: 0.8s transform ease-out;
+	will-change: transform;
+	z-index: -1;
+}
+
+.heroContact:hover::after {
+	transform: translate(0, 0);
+}
+
+.heroContact:hover {
+	color: var(--white);
+	will-change: transform;
+}
+
+@media screen and (max-width: 900px) {
+  .contactBox {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 5rem;
+  }
+
+  .rightBox {
+      width: 90%;
+      margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .contactHeading p,.contactHello p,.helloLinks, .input, .textarea {
+      font-size: 80%;
+  }
+
+  .rightBox {
+      font-size: 70%;
+  }
+
+  .heroContact {
+		font-size: 80%;
+	}
+}

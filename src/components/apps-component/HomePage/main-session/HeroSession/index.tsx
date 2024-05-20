@@ -100,7 +100,7 @@ export default function HeroSession({ nav, handleNav }: HeroSessionProps) {
 					<span>Tien</span> <span>Nguyen Duy.</span>
 				</p>
 				<p className={styles.heroDesc}>
-					I'm a <span className={styles.heroDescSub}>Web Developer.</span>
+					I&apos;m a <span className={styles.heroDescSub}>Web Developer.</span>
 				</p>
 			</motion.div>
 			<motion.span

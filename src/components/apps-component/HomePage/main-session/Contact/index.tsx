@@ -1,8 +1,37 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
+import { toast } from "react-toastify";
 import styles from "src/styles/Contact.module.css";
 
 export default function Contact() {
+  const [formInput, setFormInput] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    console.log(formInput);
+    const res = await fetch("/api/send", {
+      method: "POST",
+      body: JSON.stringify(formInput)
+    });
+
+    if(!res?.ok) {
+      toast.error("Send mail failed!")
+      return;
+    }
+
+    toast.success("Send mail successfully!")
+    setFormInput({
+      name: "",
+      email: "",
+      message: ""
+    })
+  }
+
   const fade = {
     opacity: 1,
     transition: {
@@ -39,9 +68,7 @@ export default function Contact() {
 
             <form
               name="contact-form"
-              method="POST"
               data-netlify="true"
-              action="POST"
             >
               <input type="hidden" name="form-name" value="contact-form" />
               <div className={styles.formTop}>
@@ -54,6 +81,10 @@ export default function Contact() {
                     id="name"
                     placeholder="Enter your name"
                     required
+                    value={formInput.name}
+                    onChange={(e) => {
+                      setFormInput({...formInput, name: e.target.value})
+                    }}
                   />
                 </div>
 
@@ -66,6 +97,10 @@ export default function Contact() {
                     id="email"
                     placeholder="Enter your email address"
                     required
+                    value={formInput.email}
+                    onChange={(e) => {
+                      setFormInput({...formInput, email: e.target.value})
+                    }}
                   />
                 </div>
               </div>
@@ -79,12 +114,16 @@ export default function Contact() {
                     id="message"
                     placeholder="Hi, I think I need you to work on this particular product. Reach out as soon as you can"
                     required
+                    value={formInput.message}
+                    onChange={(e) => {
+                      setFormInput({...formInput, message: e.target.value})
+                    }}
                   ></textarea>
                 </div>
               </div>
 
               <div className={styles.formBtn}>
-                <button type="submit" className={styles.heroContact}>
+                <button type="submit" className={styles.heroContact} onClick={handleSubmit}>
                   Send Message
                 </button>
               </div>

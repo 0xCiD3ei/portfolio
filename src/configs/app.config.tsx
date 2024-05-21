@@ -125,7 +125,7 @@ export const WorkData: IWorkData[] = [
 		desc: "MonokaiToolkit (Extension) is a set of various tools for improving your experience while using social network.",
 		tech: ["React.js", "Redux Toolkit", "Typescript", "Vite", "Ant Design", ],
 		gitlink: "#",
-		site: "//chromewebstore.google.com/detail/monokaitoolkit-extension/dagbggkfgebkmlmnlidioknbhilfnngn",
+		site: "https://chromewebstore.google.com/detail/monokaitoolkit-extension/dagbggkfgebkmlmnlidioknbhilfnngn",
 	},
 	{
 		title: "Internal Manage",
@@ -139,7 +139,7 @@ export const WorkData: IWorkData[] = [
 		desc: "Users can create custom profiles, contacts, and links to share connections with just a short link.",
 		tech: ["React.js", "Redux Toolkit", "Typescript", "Ant Design", "TailwindCSS"],
 		gitlink: "#",
-		site: "//u2u.bio",
+		site: "https://u2u.bio",
 	},
 	{
 		title: "U2U Music Desktop",
@@ -152,7 +152,7 @@ export const WorkData: IWorkData[] = [
 		title: "NFT Marketplace",
 		desc: "Build an NFT market so everyone can buy and sell freely on the market.",
 		tech: ["Next.js", "ContextAPI", "TailwindCSS", "Solidity", "Openzeppelin", ],
-		gitlink: "//github.com/0xCiD3ei/nft-marketplace",
-		site: "//nft-fullstack.vercel.app",
+		gitlink: "https://github.com/0xCiD3ei/nft-marketplace",
+		site: "https://nft-fullstack.vercel.app",
 	},
 ];

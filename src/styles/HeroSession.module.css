@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 .heroSection {
-	background-image: url("../assets/images/hero-bg-1.jpg");
+	background-image: url("/hero-bg-1.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
